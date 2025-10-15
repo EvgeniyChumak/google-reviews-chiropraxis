@@ -23,7 +23,7 @@ module.exports = async (req, res) => {
     res.status(200).json({
       rating: data.result.rating,
       total: data.result.user_ratings_total,
-      reviews: data.result.reviews?.slice(0, 5) || [],
+      reviews: data.result.reviews || [],
     });
   } catch (error) {
     console.error("Server error:", error);
